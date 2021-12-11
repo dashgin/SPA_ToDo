@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    
+<div class="content mt-20 text-center">
+    <h2>Log in</h2>
+    <form 
+    hx-post="{% url 'account_login' %}"
+    hx-target= "#authentication">
+    {{ form|crispy }}
+        <button type="submit" class='btn btn-primary my-2'>Log in </button>
+    </form>
+    <span 
+        hx-get="{% url 'account_signup' %}" 
+        hx-target="#authentication"
+        hx-trigger="click"
+        class= "btn-link"
+        style="cursor: pointer;"
+    >
+    Need to Signup?
+    </span>
+</div>
+
+
+  {% endblock %}

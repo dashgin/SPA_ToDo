@@ -1,0 +1,20 @@
+<div class="card-header-tab card-header">
+    <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+        <i class="fa fa-tasks"></i>
+        &nbsp; Keep track of what needs to be done! 
+    </div>
+</div>
+        
+{% if not user.is_authenticated %}
+    <p class="ml-4 my-5"> To start, please make an 
+        <span 
+            hx-get="{% url 'account_signup' %}" 
+            hx-target="#authentication"
+            hx-trigger="click"
+            class= "btn-link"
+            style="cursor: pointer;"
+        >
+            account
+        </span>.
+    </p>
+{% endif %}

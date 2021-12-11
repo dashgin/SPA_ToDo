@@ -1,0 +1,13 @@
+<div class="card-footer">
+    <form 
+        hx-post="{% url 'home' %}" 
+        hx-target="#all-tasks"" 
+        hx-swap="outerHTML">
+
+        <div class="form-group d-flex">
+            <input type="text" name="name" maxlength="250" class="textinput textInput 
+                    form-control" required="" id="id_name">
+            <button type="submit" class="btn btn-primary text-nowrap ml-3">Add Task</button>
+        </div>
+    </form>
+</div>
