@@ -7,4 +7,5 @@ urlpatterns = [
     path(f"{settings.ADMIN_URL}/", admin.site.urls),
     path("accounts/", include("allauth.urls")),
     path("", include("todo.urls")),
+    path("api/", include("todo.api_urls")),
 ]
